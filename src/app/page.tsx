@@ -77,24 +77,24 @@ export default function Page() {
       </nav>
 
       {/* Hero Section */}
-      <section className="min-h-screen flex flex-col justify-center items-center px-8 relative pt-20">
+      <section className="min-h-screen flex flex-col justify-center items-center px-6 sm:px-8 relative pt-20">
         <div className="text-center space-y-12 max-w-5xl mx-auto">
           <div className="space-y-6">
-            <h1 className="text-7xl md:text-9xl lg:text-[8rem] font-serif tracking-tight leading-none" style={{ fontFamily: 'Georgia, serif' }}>
+            <h1 className="text-5xl md:text-7xl lg:text-[8rem] font-serif tracking-tight leading-tight md:leading-none" style={{ fontFamily: 'Georgia, serif' }}>
               Indieverse.art
             </h1>
-            <p className="text-2xl md:text-3xl lg:text-4xl text-amber-500/90 font-serif italic max-w-3xl mx-auto leading-relaxed" style={{ fontFamily: 'Georgia, serif' }}>
+            <p className="text-xl md:text-3xl lg:text-4xl text-amber-500/90 font-serif italic max-w-3xl mx-auto leading-relaxed px-2" style={{ fontFamily: 'Georgia, serif' }}>
               Stories Beyond the Shoreline
             </p>
           </div>
           
           <div className="space-y-6">
-            <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto font-sans leading-relaxed">
+            <p className="text-base md:text-xl text-gray-400 max-w-2xl mx-auto font-sans leading-relaxed">
               Experience our debut film — a contemplative journey along forgotten coasts
             </p>
             <Button 
               size="lg" 
-              className="bg-amber-600 hover:bg-amber-500 text-black px-10 py-6 text-xl font-sans tracking-wide transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-amber-500/25 group"
+              className="bg-amber-600 hover:bg-amber-500 text-black px-8 md:px-10 py-5 md:py-6 text-lg md:text-xl font-sans tracking-wide transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-amber-500/25 group"
             >
               <Play className="w-5 h-5 mr-3 group-hover:scale-110 transition-transform duration-300" />
               Watch Shoreline
@@ -103,7 +103,7 @@ export default function Page() {
         </div>
         
         {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="hidden sm:block absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
           <div className="w-6 h-10 border-2 border-gray-600 rounded-full p-1">
             <div className="w-1 h-3 bg-amber-500 rounded-full mx-auto animate-pulse"></div>
           </div>
@@ -151,8 +151,8 @@ export default function Page() {
               <div className="space-y-6 group h-full">
                 <div className="aspect-[16/9] lg:aspect-[3/2] bg-gray-900 border border-gray-800 overflow-hidden rounded-xl relative">
                   <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1710988486821-9af47f60d62b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmaWxtJTIwcG9zdGVyJTIwbm9pciUyMGNpbmVtYXRpY3xlbnwxfHx8fDE3NTgyNzMwMTh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                    alt="Shoreline film poster"
+                    src="/images/shoreline-poster.jpg"
+                    alt="Shoreline short film poster"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
