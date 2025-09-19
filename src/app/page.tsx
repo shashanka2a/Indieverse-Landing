@@ -149,11 +149,11 @@ export default function Page() {
             {/* Shoreline - Featured Film */}
             <div className="lg:col-span-2 lg:row-span-2">
               <div className="space-y-6 group h-full">
-                <div className="aspect-[16/9] lg:aspect-[3/2] bg-gray-900 border border-gray-800 overflow-hidden rounded-xl relative">
+                <div className="aspect-[3/4] md:aspect-[2/3] lg:aspect-[2/3] bg-gray-900 border border-gray-800 overflow-hidden rounded-xl relative">
                   <ImageWithFallback
                     src="/shoreline-poster.png"
                     alt="Shoreline short film poster"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    className="w-full h-full object-contain bg-black group-hover:scale-[1.01] transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
                   <div className="absolute top-6 left-6">
