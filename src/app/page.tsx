@@ -151,7 +151,7 @@ export default function Page() {
               <div className="space-y-6 group h-full">
                 <div className="aspect-[16/9] lg:aspect-[3/2] bg-gray-900 border border-gray-800 overflow-hidden rounded-xl relative">
                   <ImageWithFallback
-                    src="/images/shoreline-poster.jpg"
+                    src="/shoreline-poster.png"
                     alt="Shoreline short film poster"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
