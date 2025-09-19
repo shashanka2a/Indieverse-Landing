@@ -1,5 +1,5 @@
 
-  # Cinematic Landing Page Design
+ # Cinematic Landing Page Design
 
   This is a code bundle for Cinematic Landing Page Design. The original project is available at https://www.figma.com/design/11VShCoz9rJFQDtHvZUxKO/Cinematic-Landing-Page-Design.
 
@@ -8,4 +8,8 @@
   Run `npm i` to install the dependencies.
 
   Run `npm run dev` to start the development server.
+
+## Favicon
+
+Place the film-with-star favicon at `public/favicon.svg`. The layout includes a head link to `/favicon.svg`.
   
