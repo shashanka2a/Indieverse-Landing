@@ -48,7 +48,6 @@ export default function Page() {
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
-            <a href="#about" className="text-gray-300 hover:text-amber-500 transition-colors duration-300 font-sans">About</a>
             <a href="#films" className="text-gray-300 hover:text-amber-500 transition-colors duration-300 font-sans">Films</a>
             <a href="#behind-scenes" className="text-gray-300 hover:text-amber-500 transition-colors duration-300 font-sans">Behind the Scenes</a>
             <a href="#connect" className="text-gray-300 hover:text-amber-500 transition-colors duration-300 font-sans">Connect</a>
@@ -67,7 +66,6 @@ export default function Page() {
         {isMenuOpen && (
           <div className="md:hidden bg-black/95 backdrop-blur-md border-t border-gray-800/50">
             <div className="px-8 py-6 space-y-4">
-              <a href="#about" className="block text-gray-300 hover:text-amber-500 transition-colors duration-300 font-sans" onClick={() => setIsMenuOpen(false)}>About</a>
               <a href="#films" className="block text-gray-300 hover:text-amber-500 transition-colors duration-300 font-sans" onClick={() => setIsMenuOpen(false)}>Films</a>
               <a href="#behind-scenes" className="block text-gray-300 hover:text-amber-500 transition-colors duration-300 font-sans" onClick={() => setIsMenuOpen(false)}>Behind the Scenes</a>
               <a href="#connect" className="block text-gray-300 hover:text-amber-500 transition-colors duration-300 font-sans" onClick={() => setIsMenuOpen(false)}>Connect</a>
@@ -103,34 +101,6 @@ export default function Page() {
         </div>
       </section>
 
-      {/* About Section */}
-      <section id="about" className="py-32 px-8 md:px-16 lg:px-32">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-serif mb-20 text-center tracking-tight" style={{ fontFamily: 'Georgia, serif' }}>
-            About
-          </h2>
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8">
-              <p className="text-xl md:text-2xl text-gray-300 leading-relaxed font-sans">
-                At Indieverse, we believe in the power of independent storytelling. Our mission is to create authentic, 
-                thought-provoking films that challenge conventions.
-              </p>
-              <p className="text-lg md:text-xl text-gray-400 leading-relaxed font-sans">
-                Every frame we capture is a testament to our commitment to artistic integrity and narrative innovation, 
-                bringing untold stories from the margins to the center stage.
-              </p>
-            </div>
-            <div className="text-center md:text-left">
-              <div className="inline-block p-8 border border-amber-600/30 rounded-lg bg-amber-600/5">
-                <h3 className="text-3xl font-serif mb-4 text-amber-500" style={{ fontFamily: 'Georgia, serif' }}>Our Vision</h3>
-                <p className="text-gray-300 font-sans">Cinema that transcends boundaries and touches the soul</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <Separator className="bg-gradient-to-r from-transparent via-gray-800 to-transparent my-24" />
 
       {/* Films Section */}
       <section id="films" className="py-32 px-8 md:px-16 lg:px-32">
