@@ -138,7 +138,7 @@ export default function Page() {
           <h2 className="text-5xl md:text-6xl lg:text-7xl font-serif mb-20 text-center tracking-tight" style={{ fontFamily: 'Georgia, serif' }}>
             Films
           </h2>
-          <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-start">
             {/* Shoreline - Featured Film */}
             <div className="space-y-6 group h-full">
               <div className="aspect-[3/4] md:aspect-[2/3] bg-gray-900 border border-gray-800 overflow-hidden rounded-xl relative">
