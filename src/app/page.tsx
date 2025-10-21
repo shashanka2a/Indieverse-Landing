@@ -90,15 +90,24 @@ export default function Page() {
           
           <div className="space-y-6">
             <p className="text-base md:text-xl text-gray-400 max-w-2xl mx-auto font-sans leading-relaxed">
-              Experience our debut film — a contemplative journey along forgotten coasts
+              Experience our films — contemplative journeys exploring themes of memory, solitude, and human connection
             </p>
-            <Button 
-              size="lg" 
-              className="bg-amber-600 hover:bg-amber-500 text-black px-8 md:px-10 py-5 md:py-6 text-lg md:text-xl font-sans tracking-wide transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-amber-500/25 group"
-            >
-              <Play className="w-5 h-5 mr-3 group-hover:scale-110 transition-transform duration-300" />
-              Watch Shoreline
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Button 
+                size="lg" 
+                className="bg-amber-600 hover:bg-amber-500 text-black px-8 md:px-10 py-5 md:py-6 text-lg md:text-xl font-sans tracking-wide transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-amber-500/25 group"
+              >
+                <Play className="w-5 h-5 mr-3 group-hover:scale-110 transition-transform duration-300" />
+                Watch Shoreline
+              </Button>
+              <Button 
+                size="lg" 
+                className="bg-amber-600 hover:bg-amber-500 text-black px-8 md:px-10 py-5 md:py-6 text-lg md:text-xl font-sans tracking-wide transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-amber-500/25 group"
+              >
+                <Play className="w-5 h-5 mr-3 group-hover:scale-110 transition-transform duration-300" />
+                Watch The Beautiful Distance
+              </Button>
+            </div>
           </div>
         </div>
         
@@ -145,36 +154,64 @@ export default function Page() {
           <h2 className="text-5xl md:text-6xl lg:text-7xl font-serif mb-20 text-center tracking-tight" style={{ fontFamily: 'Georgia, serif' }}>
             Films
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
             {/* Shoreline - Featured Film */}
-            <div className="lg:col-span-2 lg:row-span-2">
-              <div className="space-y-6 group h-full">
-                <div className="aspect-[3/4] md:aspect-[2/3] lg:aspect-[2/3] bg-gray-900 border border-gray-800 overflow-hidden rounded-xl relative">
-                  <ImageWithFallback
-                    src="/shoreline-poster.png"
-                    alt="Shoreline short film poster"
-                    className="w-full h-full object-contain bg-black group-hover:scale-[1.01] transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
-                  <div className="absolute top-6 left-6">
-                    <div className="inline-block bg-amber-600 text-black text-sm px-4 py-2 rounded-full font-sans font-medium">
-                      FEATURED FILM
-                    </div>
+            <div className="space-y-6 group h-full">
+              <div className="aspect-[3/4] md:aspect-[2/3] bg-gray-900 border border-gray-800 overflow-hidden rounded-xl relative">
+                <ImageWithFallback
+                  src="/shoreline-poster.png"
+                  alt="Shoreline short film poster"
+                  className="w-full h-full object-contain bg-black group-hover:scale-[1.01] transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
+                <div className="absolute top-6 left-6">
+                  <div className="inline-block bg-amber-600 text-black text-sm px-4 py-2 rounded-full font-sans font-medium">
+                    FEATURED FILM
                   </div>
-                  <div className="absolute bottom-6 left-6 right-6">
-                    <h3 className="text-3xl lg:text-4xl font-serif mb-3 text-white" style={{ fontFamily: 'Georgia, serif' }}>Shoreline</h3>
-                    <p className="text-gray-300 font-sans text-lg mb-4 max-w-md">A contemplative journey along forgotten coasts, exploring themes of memory and solitude</p>
-                    <Button className="bg-white/10 backdrop-blur-sm hover:bg-white/20 border border-white/20 text-white">
-                      <Play className="w-4 h-4 mr-2" />
-                      Watch Now
-                    </Button>
-                  </div>
+                </div>
+                <div className="absolute bottom-6 left-6 right-6">
+                  <h3 className="text-3xl lg:text-4xl font-serif mb-3 text-white" style={{ fontFamily: 'Georgia, serif' }}>Shoreline</h3>
+                  <p className="text-gray-300 font-sans text-lg mb-4 max-w-md">A contemplative journey along forgotten coasts, exploring themes of memory and solitude</p>
+                  <Button className="bg-white/10 backdrop-blur-sm hover:bg-white/20 border border-white/20 text-white">
+                    <Play className="w-4 h-4 mr-2" />
+                    Watch Now
+                  </Button>
                 </div>
               </div>
             </div>
 
-            {/* Upcoming Projects */}
-            <div className="space-y-8">
+            {/* The Beautiful Distance - Second Film */}
+            <div className="space-y-6 group h-full">
+              <div className="aspect-[3/4] md:aspect-[2/3] bg-gray-900 border border-gray-800 overflow-hidden rounded-xl relative">
+                <ImageWithFallback
+                  src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmaWxtJTIwcG9zdGVyJTIwY2luZW1hdGljJTIwYXJ0aXN0aWN8ZW58MXx8fHwxNzU4MjczMDE5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                  alt="The Beautiful Distance film poster - A contemplative scene of two people on a park bench during sunset"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
+                <div className="absolute top-6 left-6">
+                  <div className="inline-block bg-amber-600 text-black text-sm px-4 py-2 rounded-full font-sans font-medium">
+                    FEATURED FILM
+                  </div>
+                </div>
+                <div className="absolute bottom-6 left-6 right-6">
+                  <h3 className="text-3xl lg:text-4xl font-serif mb-3 text-white" style={{ fontFamily: 'Georgia, serif' }}>The Beautiful Distance</h3>
+                  <p className="text-gray-300 font-sans text-lg mb-4 max-w-md">An intimate exploration of human connection and the spaces between us</p>
+                  <Button className="bg-white/10 backdrop-blur-sm hover:bg-white/20 border border-white/20 text-white">
+                    <Play className="w-4 h-4 mr-2" />
+                    Watch Now
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Upcoming Projects Section */}
+          <div className="mt-20">
+            <h3 className="text-3xl md:text-4xl font-serif mb-12 text-center tracking-tight" style={{ fontFamily: 'Georgia, serif' }}>
+              Coming Soon
+            </h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="space-y-6 group">
                 <div className="aspect-[2/3] bg-gray-900 border border-gray-800 overflow-hidden rounded-xl relative">
                   <ImageWithFallback
