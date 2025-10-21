@@ -3,39 +3,11 @@
 import { Button } from "../components/ui/button";
 import { Separator } from "../components/ui/separator";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
-import { Instagram, Mail, Play, ChevronLeft, ChevronRight, Menu } from "lucide-react";
-import { useState, useRef } from "react";
-
-const behindScenesImages = [
-  {
-    url: "https://images.unsplash.com/photo-1709316131422-35a5fb1e9eb2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmaWxtJTIwcHJvZHVjdGlvbiUyMGJlaGluZCUyMHNjZW5lc3xlbnwxfHx8fDE3NTgyNDMwNTF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    caption: "Director reviewing the day's footage"
-  },
-  {
-    url: "https://images.unsplash.com/photo-1638704409573-caa01fb03daa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHxtb3ZpZSUyMGNhbWVyYSUyMGZpbG1pbmd8ZW58MXx8fHwxNzU4MjczMDE5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    caption: "Capturing the perfect shot"
-  },
-  {
-    url: "https://images.unsplash.com/photo-1608663641667-f12fec60470a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmaWxtJTIwc2V0JTIwbGlnaHRpbmd8ZW58MXx8fHwxNzU4MjczMDE5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    caption: "Setting the mood with lighting"
-  }
-];
+import { Instagram, Mail, Play, Menu } from "lucide-react";
+import { useState } from "react";
 
 export default function Page() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const scrollRef = useRef<HTMLDivElement>(null);
-
-  const scrollLeft = () => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: -320, behavior: 'smooth' });
-    }
-  };
-
-  const scrollRight = () => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: 320, behavior: 'smooth' });
-    }
-  };
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -49,7 +21,6 @@ export default function Page() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
             <a href="#films" className="text-gray-300 hover:text-amber-500 transition-colors duration-300 font-sans">Films</a>
-            <a href="#behind-scenes" className="text-gray-300 hover:text-amber-500 transition-colors duration-300 font-sans">Behind the Scenes</a>
             <a href="#connect" className="text-gray-300 hover:text-amber-500 transition-colors duration-300 font-sans">Connect</a>
           </div>
 
@@ -67,7 +38,6 @@ export default function Page() {
           <div className="md:hidden bg-black/95 backdrop-blur-md border-t border-gray-800/50">
             <div className="px-8 py-6 space-y-4">
               <a href="#films" className="block text-gray-300 hover:text-amber-500 transition-colors duration-300 font-sans" onClick={() => setIsMenuOpen(false)}>Films</a>
-              <a href="#behind-scenes" className="block text-gray-300 hover:text-amber-500 transition-colors duration-300 font-sans" onClick={() => setIsMenuOpen(false)}>Behind the Scenes</a>
               <a href="#connect" className="block text-gray-300 hover:text-amber-500 transition-colors duration-300 font-sans" onClick={() => setIsMenuOpen(false)}>Connect</a>
             </div>
           </div>
@@ -168,61 +138,6 @@ export default function Page() {
         </div>
       </section>
 
-      <Separator className="bg-gradient-to-r from-transparent via-gray-800 to-transparent my-24" />
-
-      {/* Behind the Scenes Section */}
-      <section id="behind-scenes" className="py-32">
-        <div className="px-8 md:px-16 lg:px-32 mb-16">
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-serif text-center tracking-tight mb-8" style={{ fontFamily: 'Georgia, serif' }}>
-            Behind the Scenes
-          </h2>
-          <p className="text-xl text-gray-400 text-center max-w-3xl mx-auto font-sans">
-            Glimpses into our creative process and the stories behind the stories
-          </p>
-        </div>
-        
-        <div className="relative">
-          {/* Scroll Navigation */}
-          <button 
-            onClick={scrollLeft}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 bg-black/50 backdrop-blur-sm hover:bg-black/70 text-white p-3 rounded-full transition-all duration-300 hover:scale-110"
-          >
-            <ChevronLeft className="w-6 h-6" />
-          </button>
-          <button 
-            onClick={scrollRight}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-black/50 backdrop-blur-sm hover:bg-black/70 text-white p-3 rounded-full transition-all duration-300 hover:scale-110"
-          >
-            <ChevronRight className="w-6 h-6" />
-          </button>
-
-          <div 
-            ref={scrollRef}
-            className="overflow-x-auto scrollbar-hide scroll-smooth"
-          >
-            <div className="flex space-x-8 px-8 md:px-16 lg:px-32 pb-4">
-              {behindScenesImages.map((image, index) => (
-                <div key={index} className="flex-shrink-0 w-96 space-y-6 group">
-                  <div className="aspect-[4/3] bg-gray-900 rounded-xl overflow-hidden shadow-2xl">
-                    <ImageWithFallback
-                      src={image.url}
-                      alt={image.caption}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                    />
-                  </div>
-                  <div className="text-center">
-                    <p className="text-gray-300 font-sans text-lg italic leading-relaxed">
-                      {image.caption}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <Separator className="bg-gradient-to-r from-transparent via-gray-800 to-transparent my-24" />
 
       {/* Connect Section */}
       <section id="connect" className="py-32 px-8 md:px-16 lg:px-32">
