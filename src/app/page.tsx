@@ -156,9 +156,12 @@ export default function Page() {
                 <div className="absolute bottom-6 left-6 right-6">
                   <h3 className="text-3xl lg:text-4xl font-serif mb-3 text-white" style={{ fontFamily: 'Georgia, serif' }}>Shoreline</h3>
                   <p className="text-gray-300 font-sans text-lg mb-4 max-w-md">A contemplative journey along forgotten coasts, exploring themes of memory and solitude</p>
-                  <Button className="bg-white/10 backdrop-blur-sm hover:bg-white/20 border border-white/20 text-white">
+                  <Button 
+                    className="bg-white/10 backdrop-blur-sm hover:bg-white/20 border border-white/20 text-white"
+                    onClick={() => window.open('https://gemini.google.com/share/a7e181b83672', '_blank')}
+                  >
                     <Play className="w-4 h-4 mr-2" />
-                    Watch Now
+                    Read Now
                   </Button>
                 </div>
               </div>
@@ -181,9 +184,12 @@ export default function Page() {
                 <div className="absolute bottom-6 left-6 right-6">
                   <h3 className="text-3xl lg:text-4xl font-serif mb-3 text-white" style={{ fontFamily: 'Georgia, serif' }}>The Beautiful Distance</h3>
                   <p className="text-gray-300 font-sans text-lg mb-4 max-w-md">An intimate exploration of human connection and the spaces between us</p>
-                  <Button className="bg-white/10 backdrop-blur-sm hover:bg-white/20 border border-white/20 text-white">
+                  <Button 
+                    className="bg-white/10 backdrop-blur-sm hover:bg-white/20 border border-white/20 text-white"
+                    onClick={() => window.open('https://gemini.google.com/share/faf79ef1ee0e', '_blank')}
+                  >
                     <Play className="w-4 h-4 mr-2" />
-                    Watch Now
+                    Read Now
                   </Button>
                 </div>
               </div>
