@@ -92,22 +92,6 @@ export default function Page() {
             <p className="text-base md:text-xl text-gray-400 max-w-2xl mx-auto font-sans leading-relaxed">
               Experience our films — contemplative journeys exploring themes of memory, solitude, and human connection
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button 
-                size="lg" 
-                className="bg-amber-600 hover:bg-amber-500 text-black px-8 md:px-10 py-5 md:py-6 text-lg md:text-xl font-sans tracking-wide transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-amber-500/25 group"
-              >
-                <Play className="w-5 h-5 mr-3 group-hover:scale-110 transition-transform duration-300" />
-                Watch Shoreline
-              </Button>
-              <Button 
-                size="lg" 
-                className="bg-amber-600 hover:bg-amber-500 text-black px-8 md:px-10 py-5 md:py-6 text-lg md:text-xl font-sans tracking-wide transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-amber-500/25 group"
-              >
-                <Play className="w-5 h-5 mr-3 group-hover:scale-110 transition-transform duration-300" />
-                Watch The Beautiful Distance
-              </Button>
-            </div>
           </div>
         </div>
         
@@ -184,8 +168,8 @@ export default function Page() {
             <div className="space-y-6 group h-full">
               <div className="aspect-[3/4] md:aspect-[2/3] bg-gray-900 border border-gray-800 overflow-hidden rounded-xl relative">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmaWxtJTIwcG9zdGVyJTIwY2luZW1hdGljJTIwYXJ0aXN0aWN8ZW58MXx8fHwxNzU4MjczMDE5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                  alt="The Beautiful Distance film poster - A contemplative scene of two people on a park bench during sunset"
+                  src="/image.png"
+                  alt="The Beautiful Distance film poster"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
@@ -201,48 +185,6 @@ export default function Page() {
                     <Play className="w-4 h-4 mr-2" />
                     Watch Now
                   </Button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Upcoming Projects Section */}
-          <div className="mt-20">
-            <h3 className="text-3xl md:text-4xl font-serif mb-12 text-center tracking-tight" style={{ fontFamily: 'Georgia, serif' }}>
-              Coming Soon
-            </h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="space-y-6 group">
-                <div className="aspect-[2/3] bg-gray-900 border border-gray-800 overflow-hidden rounded-xl relative">
-                  <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1758232589376-9f3db5aa371d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmRpZSUyMGZpbG0lMjBtb3ZpZSUyMHBvc3RlcnxlbnwxfHx8fDE3NTgyNzMwMTl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                    alt="Upcoming film poster"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-                  <div className="absolute top-4 left-4">
-                    <div className="inline-block bg-gray-700 text-white text-xs px-3 py-1 rounded-full font-sans">
-                      IN PRODUCTION
-                    </div>
-                  </div>
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <h3 className="text-lg font-serif mb-1 text-white" style={{ fontFamily: 'Georgia, serif' }}>Midnight Frequencies</h3>
-                    <p className="text-gray-400 font-sans text-sm">Coming 2025</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="space-y-6 group">
-                <div className="aspect-[2/3] bg-gray-900 border border-gray-800 overflow-hidden rounded-xl relative flex items-center justify-center">
-                  <div className="text-center text-gray-500">
-                    <div className="w-16 h-16 border-2 border-dashed border-gray-600 rounded-full flex items-center justify-center mb-4 mx-auto">
-                      <span className="text-2xl">+</span>
-                    </div>
-                    <div className="inline-block bg-gray-800 text-gray-400 text-xs px-3 py-1 rounded-full mb-2 font-sans">
-                      DEVELOPMENT
-                    </div>
-                    <h3 className="text-lg font-serif text-gray-500" style={{ fontFamily: 'Georgia, serif' }}>Coming Soon</h3>
-                  </div>
                 </div>
               </div>
             </div>
