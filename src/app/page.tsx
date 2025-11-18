@@ -80,12 +80,12 @@ export default function Page() {
           </h2>
           <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-start">
             {/* Shoreline - Featured Film */}
-            <div className="space-y-6 group h-full">
-              <div className="aspect-square bg-gray-900 border border-gray-800 overflow-hidden rounded-xl relative cursor-pointer">
+            <div className="space-y-6 group h-full w-full">
+              <div className="aspect-square w-full bg-gray-900 border border-gray-800 overflow-hidden rounded-xl relative cursor-pointer">
                 <ImageWithFallback
                   src="/shoreline-poster.png"
                   alt="Shoreline short film poster"
-                  className="w-full h-full object-cover bg-black group-hover:scale-105 transition-transform duration-700 ease-out"
+                  className="w-full h-full object-cover object-center bg-black group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
                 <div className="absolute top-6 left-6">
@@ -109,12 +109,12 @@ export default function Page() {
             </div>
 
             {/* The Beautiful Distance - Second Film */}
-            <div className="space-y-6 group h-full">
-              <div className="aspect-square bg-gray-900 border border-gray-800 overflow-hidden rounded-xl relative cursor-pointer">
+            <div className="space-y-6 group h-full w-full">
+              <div className="aspect-square w-full bg-gray-900 border border-gray-800 overflow-hidden rounded-xl relative cursor-pointer">
                 <ImageWithFallback
                   src="/image.png"
                   alt="The Beautiful Distance film poster"
-                  className="w-full h-full object-cover bg-black group-hover:scale-105 transition-transform duration-700 ease-out"
+                  className="w-full h-full object-cover object-center bg-black group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
                 <div className="absolute top-6 left-6">
@@ -125,7 +125,7 @@ export default function Page() {
                 <div className="absolute bottom-6 left-6 right-6 transition-all duration-500 ease-out group-hover:translate-y-[-20px]">
                   <h3 className="text-2xl font-sans font-bold mb-2 text-white">The Beautiful Distance</h3>
                   <p className="text-gray-400 font-sans text-xs mb-3">Feature Film • Drama • Romance</p>
-                  <p className="text-gray-300 font-sans text-sm mb-4 max-w-md opacity-0 group-hover:opacity-100 transition-all duration-500 delay-100 translate-y-4 group-hover:translate-y-0 line-clamp-2">A compelling romantic drama set against the backdrop of the high-stakes US tech industry (Seattle/San Jose). It tells the story of Arjun, a brilliant, perpetually under-resourced tech enthusiast juggling an F-1 visa and a dream of securing VC funding, and Anjali, a sharp, highly accomplished Program Manager shielded by the coveted stability of an H-1B visa. Their relationship is not a classic opposites-attract story, but a collision between two incompatible timelines: one built on speculative dreams and one built on absolute deadlines. The real distance, the doori, is not geographic, but the immense, practical gap between an F-1 student's financial precarity and a high-salaried manager's professional pressure, forcing them to choose between love and the hard-won security of the American Dream.</p>
+                  <p className="text-gray-300 font-sans text-sm mb-4 max-w-md opacity-0 group-hover:opacity-100 transition-all duration-500 delay-100 translate-y-4 group-hover:translate-y-0 line-clamp-2">A romantic drama set in the US tech industry. Arjun, an F-1 student pursuing VC funding, and Anjali, an H-1B Program Manager, face an impossible choice between love and the security of the American Dream.</p>
                   <Button 
                     className="bg-transparent backdrop-blur-sm hover:bg-white/10 border border-white text-white opacity-0 group-hover:opacity-100 transition-all duration-500 delay-150 translate-y-4 group-hover:translate-y-0"
                     onClick={() => window.open('https://gemini.google.com/share/faf79ef1ee0e', '_blank')}
