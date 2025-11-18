@@ -85,7 +85,7 @@ export default function Page() {
                 <ImageWithFallback
                   src="/shoreline-poster.png"
                   alt="Shoreline short film poster"
-                  className="w-full h-full object-contain bg-black group-hover:scale-[1.01] transition-transform duration-700"
+                  className="w-full h-full object-cover bg-black group-hover:scale-[1.01] transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
                 <div className="absolute top-6 left-6">
@@ -113,7 +113,7 @@ export default function Page() {
                 <ImageWithFallback
                   src="/image.png"
                   alt="The Beautiful Distance film poster"
-                  className="w-full h-full object-contain bg-black group-hover:scale-[1.01] transition-transform duration-700"
+                  className="w-full h-full object-cover bg-black group-hover:scale-[1.01] transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
                 <div className="absolute top-6 left-6">
